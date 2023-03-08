@@ -28,21 +28,71 @@ private int _actualIndex;
         //Loading all the texts we just want to display, we'll use functions for harder displays
         //such as colors changing depending of an enum
         _name.text = weaponToDisplay.WeaponName;
-        _price.text = weaponToDisplay.Price.ToString();
-        _tier.text = weaponToDisplay.Tier + "-" + weaponToDisplay.Rarity;
+        _price.text = weaponToDisplay.Price + " Po";
+        DisplayTier(_tier, weaponToDisplay.Tier, weaponToDisplay.Rarity);
         
         _type.text = "Arme de " + weaponToDisplay.Reach + " " + weaponToDisplay.Type;
         
-        _weight.text = weaponToDisplay.Weight.ToString();
+        _weight.text = weaponToDisplay.Weight + " Kg";
         _damage.text = weaponToDisplay.Damages.ToString();
         _penetration.text = weaponToDisplay.Penetration.ToString();
         _speed.text = weaponToDisplay.Speed.ToString();
-        _state.text = weaponToDisplay.State.ToString();
-        
+        DisplayState(_state, weaponToDisplay.State);
         _imageToDisplay.sprite  = weaponToDisplay.Image;
 
     }
 
+    private void DisplayState(TextMeshProUGUI textToModify, float state)
+    {
+        if (state < 1)
+        {
+            textToModify.text = "Cassée <color=grey>" + state.ToString() + "%</color>";
+        } else if (state >= 1 && state < 15)
+        {
+            textToModify.text = "Fragile <color=red>" + state.ToString()+ "%</color>";
+        }else if (state >= 15 && state < 49)
+        {
+            textToModify.text = "Très Usée <color=orange>" + state.ToString()+ "%</color>";
+        }else if (state >= 49 && state < 80)
+        {
+            textToModify.text = "Usée <color=yellow>" + state.ToString()+ "%</color>";
+        }else if (state >= 80)
+        {
+            textToModify.text = "Neuve <color=green>" + state.ToString()+ "%</color>";
+        }
+        
+        
+    }
+    private void DisplayTier(TextMeshProUGUI textToModify, WeaponData.WeaponTier tier, WeaponData.WeaponRarity rarity)
+    {
+        textToModify.text = tier + " - " + rarity;
+        switch (rarity)
+        {
+            case WeaponData.WeaponRarity.Commun :
+                textToModify.color = Color.white;
+                break;
+            case WeaponData.WeaponRarity.Rare :
+                textToModify.color = Color.blue;
+                break;
+
+            case WeaponData.WeaponRarity.Epique :
+                textToModify.color = Color.magenta;
+                break;
+
+            case WeaponData.WeaponRarity.Légendaire :
+                textToModify.color = Color.yellow;
+                break;
+            default:     
+                break;
+
+
+            
+        }
+
+    }
+    
+    
+    
     public void NextWeapon()
     {
         _actualIndex += 1;
