@@ -1,23 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DatabaseManager : MonoBehaviour
 {
-    [SerializeField] private WeaponData weaponData;
+    //Changing the Weapon for a list of weapon, to display mutliple of them
+    //The Level Designers have to fill this list depending of wich weapons they wants the player to have acces
+    [SerializeField] private List<WeaponData> _weaponData;
     
-    private static DatabaseManager instance = null;
-    public static DatabaseManager Instance => instance;
+    private static DatabaseManager _instance = null;
+    public static DatabaseManager Instance => _instance;
 
-    public WeaponData WeaponData => weaponData;
+    public List<WeaponData> WeaponData => _weaponData;
 
     private void Awake()
     {
-        if (instance != null && instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        instance = this;
+        _instance = this;
         DontDestroyOnLoad(gameObject);
     }
 }

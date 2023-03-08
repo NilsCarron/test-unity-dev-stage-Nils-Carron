@@ -575,7 +575,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 295056304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 518869972}
+        m_TargetAssemblyTypeName: WeaponDisplayManager, Assembly-CSharp
+        m_MethodName: PreviousWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &295056304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,7 +1318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4968dce62744548b5a674b416536ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponToDisplay: {fileID: 11400000, guid: c7dcc03376561754b9a2102ca9bc5d7b, type: 2}
   _name: {fileID: 683151124}
   _price: {fileID: 1557143458}
   _tier: {fileID: 349015186}
@@ -4465,7 +4476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32930ba51ec2fa04295e49342bebb627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: c152b5a1c97165545bc63fcbec82b56c, type: 2}
+  _weaponData:
+  - {fileID: 11400000, guid: fc46d4bd904be4046baf8344aade49b2, type: 2}
+  - {fileID: 11400000, guid: c7dcc03376561754b9a2102ca9bc5d7b, type: 2}
 --- !u!4 &1346023689
 Transform:
   m_ObjectHideFlags: 0
@@ -5632,7 +5645,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1731285944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 518869972}
+        m_TargetAssemblyTypeName: WeaponDisplayManager, Assembly-CSharp
+        m_MethodName: NextWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1731285944
 MonoBehaviour:
   m_ObjectHideFlags: 0
