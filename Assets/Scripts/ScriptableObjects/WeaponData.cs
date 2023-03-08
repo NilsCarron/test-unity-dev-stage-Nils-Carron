@@ -7,6 +7,8 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
 public enum WeaponRarity{Commun, Rare, Epique, Légendaire};
+public enum WeaponTier{Magique, Physique};
+
 public enum WeaponType{Principale, Secondaire};
 public enum WeaponReach {Mêlée, Pugilat, Distance}
 
@@ -17,6 +19,7 @@ public enum WeaponReach {Mêlée, Pugilat, Distance}
     public Sprite Image;
     public float Price;
     public WeaponRarity Rarity;
+    public WeaponTier Tier;
     public WeaponType Type;
     public WeaponReach Reach;
     public float Weight;

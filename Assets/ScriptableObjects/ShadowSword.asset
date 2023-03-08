@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36e17e4b20c44e549c2c5e42a852b4f4, type: 3}
-  m_Name: BattleAxeData
+  m_Name: ShadowSword
   m_EditorClassIdentifier: 
-  WeaponName: Battle Axe
-  Image: {fileID: 21300000, guid: 96ac5ea598ac8a2448f6a4ab6fcece86, type: 3}
-  Price: 63
-  Rarity: 0
-  Tier: 1
-  Type: 1
+  WeaponName: Umbra Sword
+  Image: {fileID: 21300000, guid: 4266315bb6e1c2b4ea28a8d34efe152a, type: 3}
+  Price: 666
+  Rarity: 2
+  Tier: 0
+  Type: 0
   Reach: 0
-  Weight: 1.76
-  Damages: 23.2
-  Penetration: 1.4
-  Speed: 2.3
-  State: 76
+  Weight: 0.01
+  Damages: 50
+  Penetration: 20
+  Speed: 1
+  State: 23
