@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class WeaponData : ScriptableObject
 {
+    //Using 4 enums to add some content easily
 public enum WeaponRarity{Commun, Rare, Epique, Légendaire};
 public enum WeaponTier{Magique, Physique};
 
@@ -17,11 +18,17 @@ public enum WeaponReach {Mêlée, Pugilat, Distance}
 
     public String WeaponName;
     public Sprite Image;
-    public float Price;
+    public float Price; 
+    //Set the price at float, if the weapon can cost floating amounts
+    //Can be changed for ints if we can only pay with round amounts
+    
+    
     public WeaponRarity Rarity;
     public WeaponTier Tier;
     public WeaponType Type;
     public WeaponReach Reach;
+    
+    //Using float for easyer balancing
     public float Weight;
     public float Damages;
     public float Penetration;
