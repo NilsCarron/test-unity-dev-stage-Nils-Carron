@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e17e4b20c44e549c2c5e42a852b4f4, type: 3}
+  m_Name: Dwarven Bow
+  m_EditorClassIdentifier: 
+  WeaponName: The great Bow Of Fate
+  Image: {fileID: 21300000, guid: 23fd3dd5b4cff4342bdd9a266c354bd0, type: 3}
+  Price: 1000
+  Rarity: 3
+  Tier: 0
+  Type: 0
+  Reach: 2
+  Weight: 5
+  Damages: 55
+  Penetration: 60
+  Speed: 10
+  State: 100

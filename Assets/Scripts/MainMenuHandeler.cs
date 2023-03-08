@@ -13,17 +13,18 @@ public class MainMenuHandeler : MonoBehaviour
 
     private GameObject _mainMenu;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    /// <summary>
+    /// Goes back to the main menu and disable the carousel
+    /// </summary>
     public void OnClickReturn()
     {
         _carousel.SetActive(false);
         _mainMenu.SetActive(true);
 
     }
+    /// <summary>
+    /// Opens the carousel and disable the main menu
+    /// </summary>
     public void OnClickStart()
     {
         _mainMenu.SetActive(false);
